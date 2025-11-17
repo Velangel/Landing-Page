@@ -1,19 +1,24 @@
 import { Route, Routes } from "react-router-dom"
 import { LiaSchoolSolid } from "react-icons/lia"
 import { MdCode, MdLaptopChromebook, MdWork } from "react-icons/md"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaSpotify } from "react-icons/fa"
 import LanguagesTable from '../components/LanguagesTable'
 
 function Hero() {
   return(
   <div className="w-screen min-h-screen bg-gradient-to-r from-zinc-800 to-zinc-950 py-8">
-    <img src=" /images/mi-foto.jpg" alt="Foto" class=" mt-9 w-64 h-64 rounded-full object-cover border-x-4 border-orange-400 ml-auto mr-auto transition-colors ease out hover:border hover:border-orange-800"/>
+    <img src=" /images/mi-foto.png" alt="Foto" class=" mt-9 w-64 h-64 rounded-full object-cover border-x-4 border-orange-400 ml-auto mr-auto transition-colors ease out hover:border hover:border-orange-800"/>
 
-    <div class="flex place-content-center">
-    <MdCode size="4em" color="orange"/>
+    <div class="flex items-center place-content-center">
+    <MdCode size="5em" color="orange"/>
+    <div class="flex flex-col">
+    <h2 style={{fontSize: '1.5rem', fontWeight: 'semibold', textAlign: 'center', color: "white"}}>
+      Buen día, te saluda
+    </h2>
     <h1 style={{fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: "white"}}>
       Angel Velazque
     </h1>
+    </div>
     </div>
 
     {/* Cards */}
@@ -41,10 +46,25 @@ function Hero() {
     <a href="https://www.bufferring.org/" class="block basis-1/2 p-4 bg-white border border-zinc-200 rounded-lg shadow-sm hover:bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700">
       <MdWork size="2em" color="white"/>
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Trabajos importantes</h5>
-      <img src=" /images/logo.png" alt="Logo" class="ml-auto mr-auto mt-9 w-64 h-64"></img>
-        <p class="flex place-content-center mb-2 font-normal text-gray-700 dark:text-gray-400">
-        BufferRing's Developer
+      <div className="flex place-content-center items-center">
+      <img src="/images/logo.png" alt="Logo" class="mt-9 w-32 h-32"></img>
+      <div className="flex flex-col p-2">
+      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">BufferRing</h5>
+        <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+        Developer
         </p>
+      </div>
+        </div>  
+    </a>
+
+    <a href="/api" class="block basis-1/2 p-4 flex items-center bg-white border border-zinc-200 rounded-lg shadow-sm hover:bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700">
+      <FaSpotify size="4em" color="#1DB954"/>
+      <div className="flex flex-col p-2">
+      <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Buscador de Spotify</h5>
+        <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+        Presiona para hacer la prueba gratuita
+        </p>
+      </div>
     </a>
     
     </div>

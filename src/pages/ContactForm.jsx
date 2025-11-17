@@ -8,8 +8,7 @@ function ContactForm() {
 
     const handleSubmit = (e) => {
         setIsSubmitting(true);
-        // El formulario se enviará normalmente a FormSubmit
-        // Pero también podemos mostrar un mensaje de éxito
+
         setTimeout(() => {
             setIsSubmitted(true);
             setIsSubmitting(false);
@@ -140,7 +139,7 @@ function ContactForm() {
                         required
                     />
                     <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                        Acepto los <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">términos y condiciones</a> y doy veracidad de mis datos.
+                        Acepto los <a href="/terms" className="text-blue-600 hover:underline dark:text-blue-500">términos y condiciones</a> y doy veracidad de mis datos.
                     </label>    
                 </div>
                 
