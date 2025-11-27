@@ -54,19 +54,19 @@ const LanguagesTable = () => {
   return (
     <div className="space-y-8 max-w-4xl mx-auto">
       {/* Sección Lenguajes - Mismo diseño que tecnologías pero con barras */}
-      <div className="bg-zinc-800 rounded-xl shadow-2xl p-6 border border-zinc-700">
+      <div className="bg-zinc-900 rounded-xl shadow-2xl p-6 border border-zinc-800">
         <div className="flex items-center gap-2 mb-6">
-          <h2 className="text-2xl font-bold text-white">Lenguajes de Programación</h2>
+          <h2 className="text-2xl font-bold text-orange-500">Lenguajes de Programación</h2>
           <span className="text-gray-400">• Uso global</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {languages.map((lang) => (
-            <div key={lang.id} className="flex flex-col p-4 rounded-lg bg-zinc-700 border border-zinc-600 hover:bg-zinc-650 transition-colors duration-200">
+            <div key={lang.id} className="flex flex-col p-4 rounded-lg bg-zinc-800 border border-zinc-800 hover:bg-zinc-850 transition-colors duration-200">
               {/* Parte superior: Ícono y nombre */}
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 flex items-center justify-center bg-zinc-600 rounded-lg flex-shrink-0">
+                  <div className="w-12 h-12 flex items-center justify-center bg-zinc-700 rounded-lg flex-shrink-0">
                     {lang.icon}
                   </div>
                   <span className="font-semibold text-white text-lg">{lang.name}</span>
@@ -79,7 +79,7 @@ const LanguagesTable = () => {
                 <span className="font-bold text-white text-sm min-w-[40px]">
                   {lang.percentage}
                 </span>
-                <div className="flex-1 bg-gray-600 rounded-full h-2.5">
+                <div className="flex-1 bg-zinc-700 rounded-full h-2.5">
                   <div 
                     className={`h-2.5 rounded-full ${lang.color} transition-all duration-1000 ease-out border border-opacity-20`}
                     style={{ width: lang.percentage }}
@@ -92,17 +92,17 @@ const LanguagesTable = () => {
       </div>
 
       {/* Sección Tecnologías - Diseño original */}
-      <div className="bg-zinc-800 rounded-xl shadow-2xl p-6 border border-zinc-700">
+      <div className="bg-zinc-900 rounded-xl shadow-2xl p-6 border border-zinc-800">
         <div className="flex items-center gap-2 mb-6">
-          <h2 className="text-2xl font-bold text-white">Tecnologías y Frameworks</h2>
+          <h2 className="text-2xl font-bold text-orange-500">Tecnologías y Frameworks</h2>
           <span className="text-gray-400">• Mi experiencia</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {technologies.map((tech) => (
-            <div key={tech.id} className="flex items-center justify-between p-4 rounded-lg bg-zinc-700 border border-zinc-600 hover:bg-zinc-650 transition-colors duration-200">
+            <div key={tech.id} className="flex items-center justify-between p-4 rounded-lg bg-zinc-800 border border-zinc-800 hover:bg-zinc-750 transition-colors duration-200">
               <div className="flex items-center gap-3 flex-1">
-                <div className="w-12 h-12 flex items-center justify-center bg-zinc-600 rounded-lg flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center bg-zinc-700 rounded-lg flex-shrink-0">
                   {tech.icon}
                 </div>
                 <div>

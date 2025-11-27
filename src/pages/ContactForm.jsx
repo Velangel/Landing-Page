@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoArrowUndoCircleSharp } from "react-icons/io5";
+import Background from "../components/Background";
 
 function ContactForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,7 +18,9 @@ function ContactForm() {
 
     if (isSubmitted) {
         return (
-            <div className="w-screen min-h-screen bg-gradient-to-r from-zinc-800 to-zinc-950 py-8 flex flex-col items-center justify-center">
+            <div className="relative min-h-screen overflow-hidden py-8">
+
+            <Background />
                 
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg max-w-sm mx-auto mt-8">
                     <div className="flex items-center">
@@ -44,7 +47,10 @@ function ContactForm() {
     }
 
     return (
-        <div className="w-screen min-h-screen bg-gradient-to-r from-zinc-800 to-zinc-950 py-8">
+        <div className="relative min-h-screen overflow-hidden py-8">
+
+        <Background />
+        
             <Link to="/" className="ml-8 inline-block">
                 <IoArrowUndoCircleSharp size="2em" color="white"/>
             </Link>
@@ -139,7 +145,7 @@ function ContactForm() {
                         required
                     />
                     <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                        Acepto los <a href="/terms" className="text-blue-600 hover:underline dark:text-blue-500">términos y condiciones</a> y doy veracidad de mis datos.
+                        Acepto los <a href="/terms" className="text-orange-600 hover:underline dark:text-orange-500">términos y condiciones</a> y doy veracidad de mis datos.
                     </label>    
                 </div>
                 
