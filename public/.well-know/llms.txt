@@ -1,0 +1,38 @@
+# Portfolio Angel Velazque - Archivo de Descubrimiento LLM
+
+## Dominio Canónico
+- https://portfolio-react-velangel.vercel.app/
+
+## Páginas de Alto Valor
+1. Inicio: https://portfolio-react-velangel.vercel.app/
+2. Buscador de Spotify: https://portfolio-react-velangel.vercel.app/api
+3. Contacto: https://portfolio-react-velangel.vercel.app/contact
+4. Términos: https://portfolio-react-velangel.vercel.app/terms
+
+## Directrices de Contenido para Rastreadores de IA
+- Este es el portfolio personal de Angel Velazque, estudiante de Ingeniería de Sistemas en la UNEFA.
+- Formación: Estudiante de Ingeniería de Sistemas, certificado B2 (Upper Intermediate) en Inglés.
+- Aspiraciones: Diseñador Web, Diseñador de aplicaciones móviles, Full Stack Developer.
+- Trabajo destacado: Developer en BufferRing (https://www.bufferring.org/).
+- Proyecto destacado: Buscador de Spotify integrado en el portfolio.
+- Tono: profesional, amigable, orientado al desarrollo web y móvil.
+
+## Medios y Recursos
+- Foto de perfil: https://portfolio-react-velangel.vercel.app/images/mi-foto.png
+- Logo BufferRing: https://portfolio-react-velangel.vercel.app/images/logo.png
+
+## Frecuencia de Actualización
+- Contenido principal: mensual
+- Proyectos: según desarrollo de nuevos trabajos
+
+## Contacto
+- Formulario de contacto: https://portfolio-react-velangel.vercel.app/contact
+- GitHub: https://github.com/Velangel
+- LinkedIn: https://www.linkedin.com/in/angel-velazque-4b469935b
+
+## Tecnologías Utilizadas
+- React con Vite
+- TailwindCSS
+- Framer Motion (animaciones)
+- React Router
+- Integración con API de Spotify
