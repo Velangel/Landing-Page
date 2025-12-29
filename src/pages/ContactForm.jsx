@@ -114,11 +114,11 @@ function ContactForm() {
                         required
                     >
                         <option value="">Selecciona un país</option>
-                        <option value="NUS">No Estados Unidos</option>
-                        <option value="TQ">Turquía</option>
-                        <option value="KJ">Kasajistán</option>
+                        <option value="NUS">Estados Unidos</option>
+                        <option value="TQ">Venezuela</option>
+                        <option value="KJ">España</option>
                         <option value="MG">Mongolia</option>
-                        <option value="GE">Guyana Esequiba</option>
+                        <option value="GE">Otro</option>
                     </select>
                 </div>
 
