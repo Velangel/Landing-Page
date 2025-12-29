@@ -66,12 +66,12 @@ const LanguagesTable = () => {
               {/* Parte superior: Ícono y nombre */}
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 flex items-center justify-center bg-zinc-700 rounded-lg flex-shrink-0">
+                  <div className="w-12 h-12 flex items-center justify-center bg-zinc-700 rounded-lg shrink-0">
                     {lang.icon}
                   </div>
                   <span className="font-semibold text-white text-lg">{lang.name}</span>
                 </div>
-                <div className={`w-3 h-3 rounded-full ${lang.color} flex-shrink-0`}></div>
+                <div className={`w-3 h-3 rounded-full ${lang.color} shrink-0`}></div>
               </div>
               
               {/* Parte inferior: Barra de progreso */}
@@ -102,7 +102,7 @@ const LanguagesTable = () => {
           {technologies.map((tech) => (
             <div key={tech.id} className="flex items-center justify-between p-4 rounded-lg bg-zinc-800 border border-zinc-800 hover:bg-zinc-750 transition-colors duration-200">
               <div className="flex items-center gap-3 flex-1">
-                <div className="w-12 h-12 flex items-center justify-center bg-zinc-700 rounded-lg flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center bg-zinc-700 rounded-lg shrink-0">
                   {tech.icon}
                 </div>
                 <div>
@@ -110,7 +110,7 @@ const LanguagesTable = () => {
                   <span className="text-gray-400 text-sm">{tech.level}</span>
                 </div>
               </div>
-              <div className={`w-3 h-3 rounded-full ${tech.color} flex-shrink-0`}></div>
+              <div className={`w-3 h-3 rounded-full ${tech.color} shrink-0`}></div>
             </div>
           ))}
         </div>

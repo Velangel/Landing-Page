@@ -90,7 +90,7 @@ function Hero() {
       whileHover="hover"
       viewport={{ once: true }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-    class="block basis-1/4 p-4 mt-2 bg-white border border-zinc-200 rounded-lg shadow-sm hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
+    class="block basis-1/4 p-4 mt-2 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
       <LiaSchoolSolid size="2em" color="white"/>
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-orange-500">Formación</h5>
       <ul class="list-disc px-3 py-2 font-normal text-gray-700 dark:text-gray-400">
@@ -106,7 +106,7 @@ function Hero() {
     whileHover="hover"
     viewport={{ once: true }}
     transition={{ duration: 0.3, ease: "easeOut" }}
-    class="block basis-1/4 p-4 mt-2 bg-white border border-zinc-200 rounded-lg shadow-sm hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
+    class="block basis-1/4 p-4 mt-2 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
       <MdLaptopChromebook size="2em" color="white"/>
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-orange-500">Aspiraciones</h5>
       <ul class="list-disc px-3 py-2 font-normal text-gray-700 dark:text-gray-400">
@@ -123,7 +123,7 @@ function Hero() {
       whileHover="hover"
       viewport={{ once: true }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-    href="https://www.bufferring.org/" class="block basis-1/2 p-4 mt-2 bg-white border border-zinc-200 rounded-lg shadow-sm hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
+    href="https://www.bufferring.org/" class="block basis-1/2 p-4 mt-2 bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
       <MdWork size="2em" color="white"/>
       <h5 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-orange-500">Trabajos importantes</h5>
       <div className="flex place-content-center items-center">
@@ -144,7 +144,7 @@ function Hero() {
       whileHover="hover"
       viewport={{ once: true }}
       transition={{ duration: 0.3, ease: "easeOut" }}    
-    href="/api" class="block basis-1/2 p-4 mt-2 flex items-center bg-white border border-zinc-200 rounded-lg shadow-sm hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
+    href="/api" class="block basis-1/2 p-4 mt-2 flex items-center bg-white border border-zinc-200 rounded-lg shadow-xs hover:bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800 dark:hover:bg-zinc-800">
       <FaSpotify size="4em" color="#1DB954"/>
       <div className="flex flex-col p-2">
       <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Buscador de Spotify</h5>
@@ -176,7 +176,7 @@ function Hero() {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        class="max-w-sm p-6 bg-white border border-zinc-200 rounded-lg shadow-sm dark:bg-zinc-900 dark:border-zinc-800 ml-auto mr-auto">
+        class="max-w-sm p-6 bg-white border border-zinc-200 rounded-lg shadow-xs dark:bg-zinc-900 dark:border-zinc-800 ml-auto mr-auto">
         
         <div class="flex place-content-center gap-4 ">
         
@@ -193,7 +193,7 @@ function Hero() {
           duration: 0.3,
           ease: "easeOut",
       }}        
-        href="https://github.com/Velangel" class="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 focus:ring-4 focus:outline-none focus:ring-zinc-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
+        href="https://github.com/Velangel" class="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 focus:ring-4 focus:outline-hidden focus:ring-zinc-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
             <FaGithub size="2em" color="white"/>
             <div class="text-left rtl:text-right">
                 <div class="-mt-1 font-sans text-sm font-semibold">GitHub</div>
@@ -213,7 +213,7 @@ function Hero() {
           duration: 0.3,
           ease: "easeOut",
       }}        
-        href="https://www.linkedin.com/in/angel-velazque-4b469935b" class="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 focus:ring-4 focus:outline-none focus:ring-zinc-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
+        href="https://www.linkedin.com/in/angel-velazque-4b469935b" class="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 focus:ring-4 focus:outline-hidden focus:ring-zinc-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
             <FaLinkedin size="2em" color="white"/>
             <div class="text-left rtl:text-right">
                 <div class="-mt-1 font-sans text-sm font-semibold">Linkedin</div>
