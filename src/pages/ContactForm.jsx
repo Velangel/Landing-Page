@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoArrowUndoCircleSharp } from "react-icons/io5";
+import { MdMail, MdCode } from "react-icons/md";
 import Background from "../components/Background";
+import ThemeToggle from "../components/ThemeToggle";
+import { motion } from "framer-motion";
 
 function ContactForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleSubmit = (e) => {
         setIsSubmitting(true);
@@ -50,16 +54,57 @@ function ContactForm() {
         <div className="relative min-h-screen overflow-hidden py-8">
 
         <Background />
-        
-            <Link to="/" className="ml-8 inline-block">
-                <IoArrowUndoCircleSharp size="2em" color="white"/>
-            </Link>
+        <ThemeToggle />
 
-            <form
+        <nav className="bg-neutral-primary/80 backdrop-blur-md fixed w-full z-20 top-0 start-0 border-b border-gray-400 dark:border-zinc-700">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"> 
+            
+            {/* Logo */}
+            <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <MdCode size="2em" className="text-orange-500"/>
+                <span className="self-center text-xl text-zinc-900 dark:text-white hover:text-orange-500 font-semibold whitespace-nowrap">Velangel</span>
+            </a>
+        
+            {/* Botón Hamburguesa */}
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} // <--- AGREGADO
+              type="button" 
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-zinc-500 dark:text-white rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-orange-500" 
+              aria-controls="navbar-default" 
+              aria-expanded={isMenuOpen}
+            >
+                <span className="sr-only">Open main menu</span>
+                <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        
+            {/* Menú Desplegable */}
+            <div 
+              className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} // <--- DINÁMICO
+              id="navbar-default"
+            >
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-lg bg-white dark:bg-zinc-900 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent">
+                <li>
+                  <a href="/" className="block py-2 px-3 text-zinc-900 dark:text-white rounded hover:bg-gray-100 dark:hover:bg-zinc-800 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 bg-transparent md:p-0" aria-current="page">Home</a>
+                </li>
+                <li>
+                  <a href="#" className="block py-2 px-3 text-orange-500 rounded md:p-0">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+            <motion.form
+                style={{ overflow: "hidden", whiteSpace: "nowrap"}}
+                initial={{ width: 0 }}
+                animate={{ width:"100%" }}
+                transition={{ duration: 2, ease: "easeInOut"}}                        
                 action="https://formsubmit.co/josevelazque.alt@gmail.com" 
                 method="POST"
                 onSubmit={handleSubmit}
-                className="max-w-sm mx-auto"
+                className="mt-12 max-w-sm mx-auto"
             >
                 {/* Campo oculto para el asunto */}
                 <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio" />
@@ -87,17 +132,14 @@ function ContactForm() {
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-                            </svg>
+                            <MdMail size={20} className="text-gray-800 dark:text-gray-500"/>
                         </div>
                         <input 
                             type="email" 
                             id="email" 
                             name="email"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                            placeholder="linux@deidad.com"
+                            placeholder="nombre@mail.com"
                             required
                         />
                     </div>
@@ -160,7 +202,7 @@ function ContactForm() {
                 >
                     {isSubmitting ? 'Enviando...' : 'Enviar'}
                 </button>
-            </form>
+            </motion.form>
         </div>
     );
 }
